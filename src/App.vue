@@ -1,14 +1,10 @@
 <script>
 
-import Header from './components/Header.vue'
 import Main from './components/Main.vue'
-import Footer from './components/Footer.vue'
 
 export default {
   components: {
-    Header,
     Main,
-    Footer,
   }
 }
 
@@ -18,9 +14,7 @@ export default {
     <div>
       
       <el-container>
-        <el-header><Header/></el-header>
         <el-main><Main/></el-main>
-        <el-footer><Footer/></el-footer>
       </el-container>
       
       <!-- 回到顶部 -->
@@ -31,16 +25,19 @@ export default {
 <style>
 
 h1 {
-  font-family: "MyFont", Verdana, sans-serif;
-  letter-spacing: 2px;
-  font-size: 28px;
+  font-family: "BoldFont", Times, "MyFont", Verdana, sans-serif;
+  letter-spacing: 0px;
+  font-size: 38px;
   margin: 0px;
   text-align: center;
 }
 
 h2, h3, h4, h5, h6 {
-  font-family: "MyFont", Verdana, sans-serif;
-  letter-spacing: 2px;
+  font-family: "BoldFont", Times, Verdana, sans-serif;
+  letter-spacing: 0px;
+  font-size: 28px;
+  margin: 0px;
+  text-align: center;
 }
 
 .el-header {
@@ -52,8 +49,17 @@ h2, h3, h4, h5, h6 {
 }
 
 p, li {
-  font-size: 16px;
+  font-family: "MyFont", Times;
+  font-size: 20px;
   line-height: 1.75rem;
+  text-align: justify;
+}
+
+.custom-button {
+  font-family: "BoldFont", "DemiFont", 'Arial', sans-serif; /* 修改字体 */
+  font-size: 16px; /* 修改字体大小 */
+  font-weight: bold; /* 修改字体粗细 */
+  color: #ffffff; /* 修改字体颜色 */
 }
 
 code {

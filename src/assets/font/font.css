@@ -1,6 +1,20 @@
 @font-face {
     font-family: "MyFont"; 
-    src: url('./DingTalk Sans.ttf'); 
+    src: url('./lmroman10-regular.otf'); 
+    font-weight: normal; 
+    font-style: bold;
+}
+
+@font-face {
+    font-family: "BoldFont"; 
+    src: url('./lmroman10-bold.otf'); 
+    font-weight: normal; 
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "DemiFont"; 
+    src: url('./lmromandemi10-regular.otf'); 
     font-weight: normal; 
     font-style: normal;
 }
