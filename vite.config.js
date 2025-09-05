@@ -23,7 +23,7 @@ export default defineConfig({
       ],
     }),
   ],
-  base:'/academic-project-page-template-vue',
+  base:'/Formation-Tracking',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
