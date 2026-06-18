@@ -1,5 +1,4 @@
 <script>
-
 import Main from './components/Main.vue'
 
 export default {
@@ -7,74 +6,100 @@ export default {
     Main,
   }
 }
-
 </script>
 
 <template>
-    <div>
-      
-      <el-container>
-        <el-main><Main/></el-main>
-      </el-container>
-      
-      <!-- 回到顶部 -->
-      <el-backtop :right="40" :bottom="80" />
-    </div>
+  <div class="app-shell">
+    <el-container>
+      <el-main class="site-main"><Main/></el-main>
+    </el-container>
+
+    <el-backtop :right="32" :bottom="56" />
+  </div>
 </template>
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #f8fbff;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f8fbff;
+  color: #142033;
+  margin: 0;
+  min-width: 320px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app,
+.app-shell {
+  min-height: 100vh;
+}
+
+.site-main {
+  padding: 0;
+}
 
 h1 {
   font-family: "BoldFont", Times, "MyFont", Verdana, sans-serif;
-  letter-spacing: 0px;
   font-size: 38px;
-  margin: 0px;
-  text-align: center;
-}
-
-h2, h3, h4, h5, h6 {
-  font-family: "BoldFont", Times, Verdana, sans-serif;
   letter-spacing: 0px;
-  font-size: 28px;
   margin: 0px;
   text-align: center;
 }
 
-.el-header {
-  padding: 0px;
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "BoldFont", Times, Verdana, sans-serif;
+  font-size: 28px;
+  letter-spacing: 0px;
+  margin: 0px;
+  text-align: center;
 }
 
+.el-header,
 .el-footer {
   padding: 0px;
 }
 
-p, li {
-  font-family: "MyFont", Times;
-  font-size: 20px;
-  line-height: 1.75rem;
+p,
+li {
+  font-family: "MyFont", Times, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.72;
   text-align: justify;
 }
 
 .custom-button {
-  font-family: "BoldFont", "DemiFont", 'Arial', sans-serif; /* 修改字体 */
-  font-size: 16px; /* 修改字体大小 */
-  font-weight: bold; /* 修改字体粗细 */
-  color: #ffffff; /* 修改字体颜色 */
+  color: #ffffff;
+  font-family: "BoldFont", "DemiFont", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 code {
-  font-family: 'Consolas', monospace;
-  border-radius: 5px;
-  padding: 2px 5px;
   background: #f2f2f2;
+  border-radius: 5px;
   color: black;
+  font-family: "Consolas", monospace;
+  padding: 2px 5px;
 }
 
 pre {
-  border-radius: 5px;
-  padding: 10px;
   background: #f2f2f2;
+  border-radius: 5px;
   line-height: 1.4rem;
+  padding: 10px;
 }
 
 pre:not(pre[id=bibtex]) {
@@ -82,74 +107,73 @@ pre:not(pre[id=bibtex]) {
 }
 
 pre code {
-  font-size: 16px;
-  color: black;
   border: none;
+  color: black;
+  font-size: 16px;
   padding: 0px;
 }
 
 blockquote {
-  border-left: 5px solid #bcbcbc;
-  padding: 10px 20px 10px 20px;
-  margin: 0px;
   background: #f6f6f6;
+  border-left: 5px solid #bcbcbc;
+  margin: 0px;
+  padding: 10px 20px 10px 20px;
 }
 
 blockquote > p {
-  margin-block-start: 0.5em;
   margin-block-end: 0.5em;
+  margin-block-start: 0.5em;
 }
 
-/* 链接颜色装饰 */
 a {
-  color: #3273dc;
+  color: #2f7fb8;
   text-decoration: none;
 }
 
-/* 鼠标焦点悬浮在链接上的颜色装饰 */
 a:hover {
-  color: #848484;
-  border-bottom: dotted;
+  border-bottom: 1px dotted currentColor;
+  color: #1f5f8f;
 }
 
 p > img {
-  width: 80%;
-  display: block;
-  margin: 0 auto;
   border-radius: 10px;
   box-shadow: 1px 1px 4px 1px #afafaf;
+  display: block;
+  margin: 0 auto;
+  width: 80%;
 }
 
 table {
   border-collapse: collapse;
-  width: max-content;
-  max-width: 100%;
+  display: block;
   margin: 0 auto;
-  display:block;
-  overflow-x:auto;
+  max-width: 100%;
+  overflow-x: auto;
+  width: max-content;
 }
 
 thead {
   border-bottom-width: 1px;
-  border-top-width: 2px;
+  border-color: rgb(0 0 0);
   border-left-width: 0px;
   border-right-width: 0px;
   border-style: solid;
-  border-color: rgb(0 0 0);
+  border-top-width: 2px;
 }
 
 tbody tr:last-child {
   border-bottom-width: 2px;
-  border-top-width: 0px;
+  border-color: rgb(0 0 0);
   border-left-width: 0px;
   border-right-width: 0px;
   border-style: solid;
-  border-color: rgb(0 0 0);
+  border-top-width: 0px;
 }
 
-th, td {
-    padding-left: 1rem;
-    padding-right: 1rem;
+th,
+td {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .katex-display {
@@ -157,4 +181,12 @@ th, td {
   overflow-y: hidden;
 }
 
+@media (max-width: 720px) {
+  p,
+  li {
+    font-size: 17px;
+    line-height: 1.66;
+    text-align: left;
+  }
+}
 </style>
