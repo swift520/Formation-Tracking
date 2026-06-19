@@ -4,14 +4,16 @@ import Main from './components/Main.vue'
 export default {
   components: {
     Main,
-  }
+  },
 }
 </script>
 
 <template>
   <div class="app-shell">
     <el-container>
-      <el-main class="site-main"><Main/></el-main>
+      <el-main class="site-main">
+        <Main />
+      </el-main>
     </el-container>
 
     <el-backtop :right="32" :bottom="56" />
@@ -24,18 +26,48 @@ export default {
 }
 
 html {
-  background: #f8fbff;
+  background: #f7faf9;
   scroll-behavior: smooth;
+  scroll-padding-top: 18px;
 }
 
 body {
-  background: #f8fbff;
+  background: #f7faf9;
   color: #142033;
   margin: 0;
   min-width: 320px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scrollbar-color: rgba(20, 32, 51, 0.28) rgba(20, 32, 51, 0.05);
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(20, 32, 51, 0.04);
+}
+
+::-webkit-scrollbar-thumb {
+  background:
+    linear-gradient(180deg, rgba(11, 131, 146, 0.46), rgba(20, 32, 51, 0.34));
+  border: 2px solid rgba(248, 251, 255, 0.92);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background:
+    linear-gradient(180deg, rgba(11, 131, 146, 0.64), rgba(20, 32, 51, 0.48));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 #app,
@@ -50,8 +82,8 @@ body {
 h1 {
   font-family: "BoldFont", Times, "MyFont", Verdana, sans-serif;
   font-size: 38px;
-  letter-spacing: 0px;
-  margin: 0px;
+  letter-spacing: 0;
+  margin: 0;
   text-align: center;
 }
 
@@ -62,14 +94,14 @@ h5,
 h6 {
   font-family: "BoldFont", Times, Verdana, sans-serif;
   font-size: 28px;
-  letter-spacing: 0px;
-  margin: 0px;
+  letter-spacing: 0;
+  margin: 0;
   text-align: center;
 }
 
 .el-header,
 .el-footer {
-  padding: 0px;
+  padding: 0;
 }
 
 p,
@@ -110,13 +142,13 @@ pre code {
   border: none;
   color: black;
   font-size: 16px;
-  padding: 0px;
+  padding: 0;
 }
 
 blockquote {
   background: #f6f6f6;
   border-left: 5px solid #bcbcbc;
-  margin: 0px;
+  margin: 0;
   padding: 10px 20px 10px 20px;
 }
 
